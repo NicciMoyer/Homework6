@@ -4,8 +4,8 @@ body {
 }
 
 .sidenav {
-  width: 130px;
-  position: fixed;
+  width: 300px;
+  position: relative;
   z-index: 1;
   top: 20px;
   left: 10px;
@@ -27,7 +27,7 @@ body {
 }
 
 .main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  margin-left: 310px; /* Same width as the sidebar + left position in px */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
