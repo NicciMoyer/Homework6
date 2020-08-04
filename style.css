@@ -1,6 +1,10 @@
-<style>
 body {
   font-family: "Lato", sans-serif;
+}
+
+
+.col{
+    margin: 20px;
 }
 
 .sidenav {
@@ -36,4 +40,3 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-</style>

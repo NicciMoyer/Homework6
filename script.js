@@ -1,11 +1,11 @@
 var cities = [];
 
 $("#city-search").on("click", function (event) {
-  
+
     event.preventDefault();
 
     var city = $("#city-input").val().trim();
- 
+
     cities.push(city);
 
     function renderCurrent() {
@@ -26,17 +26,23 @@ $("#city-search").on("click", function (event) {
 
 
 
-function renderFuture() {
+    function renderFuture() {
 
-    let queryForecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=fd73bc6942c36030c1068acea87dfea3&units=imperial"
+        let queryForecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=fd73bc6942c36030c1068acea87dfea3&units=imperial"
+        firstForecast = []
 
-    $.ajax({
-        url: queryForecastURL,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response)
+        $.ajax({
+            url: queryForecastURL,
+            method: "GET"
+        }).then(function (response) {
+            let day1Date = $("#futureDateResponse1").text(response.list[1].clouds.dt_txt)
+            let day1Temp = $("#futureTempResponse1").text("High: " + response.list[1].main.temp_max)
+            let day1Humidity = $("#futureHumidityResponse1").text("Humidity: "+ response.list[1].main.humidity)
+            let firstForecast = $("#firstForecast")
+            firstForecast.append(day1Date, day1Temp, day1Humidity)
+            console.log(response)
 
-    })
-}
-renderFuture();
+        })
+    }
+    renderFuture();
 })
