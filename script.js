@@ -43,6 +43,19 @@ $("#city-search").on("click", function (event) {
             console.log(response)
 
         })
+
+        $.ajax({
+            url: queryForecastURL,
+            method: "GET"
+        }).then(function (response) {
+            let day2Date = $("#futureDateResponse2").text(response.list[2].clouds.dt_txt)
+            let day2Temp = $("#futureTempResponse2").text("High: " + response.list[2].main.temp_max)
+            let day2Humidity = $("#futureHumidityResponse2").text("Humidity: "+ response.list[2].main.humidity)
+            let secondForecast = $("#secondForecast")
+            secondForecast.append(day2Date, day2Temp, day2Humidity)
+            console.log(response)
+
+        })
     }
     renderFuture();
 })

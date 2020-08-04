@@ -1,7 +1,9 @@
 body {
   font-family: "Lato", sans-serif;
 }
-
+ #weatherH1{
+   text-align: center;
+ }
 
 .col{
     margin: 20px;
