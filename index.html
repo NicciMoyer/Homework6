@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-
-    </script>
-
+    <script type="text/javascript"></script>
 </head>
 
 <body>
@@ -20,19 +17,17 @@
     <div class="jumbotron jumbotron-fluid lead">
         <div class="container">
             <h1 class="display-4" id="weatherH1">Weather Dashboard</h1>
-
         </div>
     </div>
 
+    <!-- This search form is wrapped in a sidenav so that the current weather card would generate next to it -->
     <div class="sidenav" id="cities-view">
         <form id="search-form">
-
             <label for="city-input">Search for a City</label>
             <input class="form-control" type="text" id="city-input" placeholder="City">
 
             <button type="button" class="btn btn-primary" id="city-search" type="search" value="Search"
-                data-toggle="button" aria-pressed="false" autocomplete="off">Search</button>
-
+                data-toggle="button" aria-pressed="false">Search</button>
         </form>
         <!-- list of previous cities searched -->
         <!-- <ul class="list-group">
@@ -42,11 +37,9 @@
             <li class="list-group-item">Porta ac consectetur ac</li>
             <li class="list-group-item">Vestibulum at eros</li>
         </ul> -->
-
-
     </div>
 
-    <!-- ///////WRAP THE REST OF THE CONTENT IN A "MAIN" DIV/////// -->
+    <!-- This main card will appear to the right of the search sidenav via the css margins selector-->
     <div class="main card">
         <h3>Current Weather</h3>
         <div class="card-body">
@@ -57,66 +50,77 @@
             </ul>
         </div>
     </div>
-
+    <br>
+    <br>
+    
+    <!-- This container holds all the cards that will show the 5-day forecast -->
     <div class="container">
-    <div class="row">
-        <div class="main card text-white bg-primary mb-3" style="max-width: 18rem;">
-            <div class="col card-body" id="firstForecast">
-                <p id="futureDateResponse1"></p>
-                <br>
-                <p id="futureTempResponse1"></p>
-                <br>
-                <p id="futureHumidityResponse1"></p>
+        <h3>5-Day Forecast</h3>
+        <div class="row">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="col card-body" id="firstForecast">
+                    <p id="futureDateResponse1"></p>
+                    <br>
+                    <p id="futureTempResponse1"></p>
+                    <br>
+                    <p id="futureHumidityResponse1"></p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="col card-body" id="secondForecast">
+                    <ul>
+                        <p id="futureDateResponse2"></p>
+                        <br>
+                        <p id="futureTempResponse2"></p>
+                        <br>
+                        <p id="futureHumidityResponse2"></p>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="col card-body" id="thirdForecast">
+                    <ul>
+                        <p id="futureDateResponse3"></p>
+                        <br>
+                        <p id="futureTempResponse3"></p>
+                        <br>
+                        <p id="futureHumidityResponse3"></p>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="col card-body" id="fourthForecast">
+                    <ul>
+                        <p id="futureDateResponse4"></p>
+                        <br>
+                        <p id="futureTempResponse4"></p>
+                        <br>
+                        <p id="futureHumidityResponse4"></p>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="col card-body" id="fifthForecast">
+
+                    <p id="futureDateResponse5"></p>
+                    <br>
+                    <p id="futureTempResponse5"></p>
+                    <br>
+                    <p id="futureHumidityResponse5"></p>
+
+                </div>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
-        <div class="main card text-white bg-primary mb-3" style="max-width: 18rem;">
-            <div class="col card-body" id="secondForecast">
-                <ul>
-                    <p id="futureDateResponse2"></p>
-                    <br>
-                    <p id="futureTempResponse2"></p>
-                    <br>
-                    <p id="futureHumidityResponse2"></p>
-                </ul>
-            </div>
-        </div>
-
-        <div class="main card text-white bg-primary mb-3" style="max-width: 18rem;">
-            <div class="col card-body" id="thirdForecast">
-                <ul>
-                    <p id="futureDateResponse3"></p>
-                    <br>
-                    <p id="futureTempResponse3"></p>
-                    <br>
-                    <p id="futureHumidityResponse3"></p>
-                </ul>
-            </div>
-        </div>
-
-        <div class="main card text-white bg-primary mb-3" style="max-width: 18rem;">
-            <div class="col card-body" id="fourthForecast">
-                <ul>
-                    <p id="futureDateResponse4"></p>
-                    <br>
-                    <p id="futureTempResponse4"></p>
-                    <br>
-                    <p id="futureHumidityResponse4"></p>
-                </ul>
-            </div>
-        </div>
-
-        <div class="main card text-white bg-primary mb-3" style="max-width: 18rem;">
-            <div class="col card-body" id="fifthForecast">
-
-                <p id="futureDateResponse5"></p>
-                <br>
-                <p id="futureTempResponse5"></p>
-                <br>
-                <p id="futureHumidityResponse5"></p>
-
-            </div>
-        </div>
     </div>
 
     <script src="script.js"></script>

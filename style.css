@@ -1,12 +1,18 @@
 body {
   font-family: "Lato", sans-serif;
 }
+
  #weatherH1{
    text-align: center;
  }
 
 .col{
     margin: 20px;
+  
+}
+
+.card-body{
+  padding: 30px;
 }
 
 .sidenav {
@@ -33,8 +39,8 @@ body {
 }
 
 .main {
-  margin-left: 310px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
+  margin-left: 310px; 
+  font-size: 28px; 
   padding: 0px 10px;
 }
 
